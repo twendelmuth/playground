@@ -1,0 +1,14 @@
+name: Test on label Preview
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: |
+        ${{ github.event.label.name == 'testing' }}
+    steps:
+      - name: Run a one-line script
+        run: Labeled with preview
