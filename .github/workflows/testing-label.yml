@@ -7,8 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: |
-        ${{ github.event.label.name == 'testing' }}
+    if: ${{ github.event.label.name == 'testing' }}
     steps:
       - name: Run a one-line script
         run: echo "Labeled with testing"
