@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.event.label.name == 'preview' }}
+    if: ${{ github.event.label.name == 'preview' }} && (${{ github.event.sender.login == 'thorsten-wendelmuth'}} || ${{ github.event.sender.login == 'twendelmuth'}})
     steps:
       - name: Run a one-line script
         run: echo "Labeled with preview"
