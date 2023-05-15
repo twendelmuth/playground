@@ -11,4 +11,4 @@ jobs:
         ${{ github.event.label.name == 'preview' }}
     steps:
       - name: Run a one-line script
-        run: Labeled with preview
+        run: echo "Labeled with preview"
