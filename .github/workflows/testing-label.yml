@@ -1,4 +1,4 @@
-name: Test on label Preview
+name: Testing label
 
 on:
   issues:
